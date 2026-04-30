@@ -11,6 +11,7 @@ Décrivez votre projet simplement :
 Que cherchez-vous à prédire ou analyser ?
 Quel est l’objectif métier ou réel ?
 *Ici:*
+
 Prédire le nombre de vélos passant à un point donné à Paris
 
 2. Formulation ML
@@ -21,6 +22,7 @@ Variables explicatives (idée initiale) :
 Objectif d’évaluation (métrique ou critère) :
 
 *Ici:*
+
 **Problème de régression**
 Variable cible : bike_count --> pour plus de précision, on va transformer la variable cible en log(bike_count)
 
@@ -53,7 +55,8 @@ ii. sur les features
 iii. lors de la Collecte
 * biais, données manquantes
 
-**Ici**
+*Ici:*
+
 Nom : Comptage vélo Paris
 Source : Open Data Paris - [Kaggle](https://www.kaggle.com/competitions/mdsb-2023/overview), n'existe malheureusement plus
 
@@ -104,7 +107,7 @@ On pense que la météo influence directement l’usage du vélo (si il pleut, o
 Pour chaque source :
 Source	Méthode	Outil
 
-*Ici :*
+*Ici:*
 
 Dataset de départ : dataset bikecounter, obtenu par téléchargement directement sur le github indiqué
 Dataset météo : historique Météo, obtenu sur le site météofrance avec la librairie	aiohttp
@@ -157,8 +160,8 @@ afficher un aperçu (head)
 sauvegarder les données en local (csv)
 être reproductible
 
-*Ici :*
-```bash
+*Ici:*
+```py
 import requests
 import pandas as pd
 
@@ -217,4 +220,7 @@ Votre repository doit contenir :
 un dossier data/ avec les données (A ne pas push sur github !!)
 un script ou notebook de collecte
 un fichier requirements.txt à jour
+Pour le mettre à jour :
+```py
 pip freeze > requirements.txt
+```
