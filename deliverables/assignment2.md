@@ -141,13 +141,3 @@ Pour charger les données :
 from src.data import load_data
 
 X, y = load_data()
-
-## Conclusion
-Ce travail permet de passer de données brutes à un dataset structuré, prêt pour la phase suivante :
-sélection de modèles
-entraînement
-évaluation
-Les choix ont été faits dans une logique de compromis entre :
-simplicité
-performance
-robustesse
