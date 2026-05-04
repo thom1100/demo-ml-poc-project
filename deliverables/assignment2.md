@@ -90,7 +90,7 @@ Target encoding du fait du risque de leakage
 Ordinal encoding car One-Hot Encoding plus adapté
 
 ### Normalisation des distributions
-Log transform notre variable target
+On a utilisé le log pour transformer notre variable target
 
 Pourquoi :
 Réduire l’asymétrie
