@@ -1,14 +1,12 @@
 from __future__ import annotations
+from pathlib import Path
+from typing import Any
+from dotenv import load_dotenv
 
 import importlib.util
 import os
 import subprocess
 import sys
-from pathlib import Path
-from typing import Any
-
-from dotenv import load_dotenv
-
 
 def _load_module(module_name: str, module_path: Path) -> Any:
     spec = importlib.util.spec_from_file_location(module_name, module_path)
@@ -41,6 +39,17 @@ load_dataset_split = data_module.load_dataset_split
 compute_metrics = metrics_module.compute_metrics
 load_model = model_io_module.load_model
 write_metrics = results_module.write_metrics
+
+def _encode_dates(X):
+    X = X.copy()
+
+    X["year"] = X["date"].dt.year
+    X["month"] = X["date"].dt.month
+    X["day"] = X["date"].dt.day
+    X["weekday"] = X["date"].dt.weekday
+    X["hour"] = X["date"].dt.hour
+
+    return X.drop(columns=["date"])
 
 
 def _validate_models_config() -> None:

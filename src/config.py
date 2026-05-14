@@ -33,9 +33,19 @@ STREAMLIT_PORT = 8501
 # Students must replace this example with their trained models.
 # Each entry must point to a serialized model saved as `.joblib`, `.pkl`, or `.pickle`.
 MODELS = {
-    "model_a": {
-        "name": "Model A",
-        "description": "A simple baseline model.",
-        "path": MODELS_DIR / "model_a.pkl",
+    "model_lasso": {
+        "name": "Model lasso",
+        "description": "A simple lasso baseline model.",
+        "path": MODELS_DIR / "model_lasso.pkl",
+    },
+    "model_ridge": {
+        "name": "Model ridge",
+        "description": "A simple ridge baseline model.",
+        "path": MODELS_DIR / "model_ridge.joblib",
+    },
+    "model_random_forest": {
+        "name": "Model random forest",
+        "description": "A random forest model.",
+        "path": MODELS_DIR / "model_random_forest.pkl",
     },
 }

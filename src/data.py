@@ -15,7 +15,7 @@ import pandas as pd
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = PROJECT_ROOT / "data"
-TRAIN_FILE = DATA_DIR / "train.parquet"
+TRAIN_FILE = DATA_DIR / "raw/bikes.parquet"
 
 
 def _get_train_path() -> Path:
